@@ -34,6 +34,8 @@ class Song
   def self.genre_count 
     genre_count_hash = {}
     @@genres.each do |genre|
+      if genre_count_hash.include?(genre)
+        genre_count_hash[genre] << +1 
       binding.pry 
     end
   end
